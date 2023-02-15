@@ -3,7 +3,9 @@ import TodoList from './Components/TodoList';
 import NewTodo from './Components/NewTodo';
 import { Todo } from './todomodal';
 
+
 import './App.css';
+
 
 
 const App: React.FC = () => {
@@ -13,11 +15,17 @@ const App: React.FC = () => {
   
 //add to do
   const todoSubmitHandler = (text:string) => {
-    console.log(text)
+    let newtext = text.replace(/\s/g, '');
+ 
+    if (newtext.length >= 1){
     setTodos((prevTodos) => [
       ...prevTodos,
       {id: Math.random().toString(), text:text},
+      
+      
     ])
+  }
+  
   }
 
   //delete to do
@@ -28,6 +36,9 @@ const App: React.FC = () => {
       return prevTodos.filter((todo) => todo.id !== todoId);
     });
   }
+
+
+
   
 
   return (
