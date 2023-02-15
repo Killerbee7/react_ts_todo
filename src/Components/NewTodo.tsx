@@ -27,8 +27,8 @@ const NewTodo : React.FC<NewTodoProps> = (props) => {
     console.log(enteredText)
 
     props.onAddTodo(enteredText);
-
- 
+    
+    textInputRef.current!.value='' ;
 
     }
 
@@ -40,7 +40,7 @@ const NewTodo : React.FC<NewTodoProps> = (props) => {
             <label htmlFor="todo-text">
                 Todo Items
             </label>
-            <input type="text" id="todo-text"  placeholder="Input text"   ref={textInputRef}  />
+            <input type="text" id="todo-text"  placeholder="Input text"  ref={textInputRef}  />
         </div>
         <button type="submit"  >Add Todo</button>
        
