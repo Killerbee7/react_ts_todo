@@ -1,3 +1,7 @@
+# Todo App using react TS template
+
+## User can add task , delete and edit
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
