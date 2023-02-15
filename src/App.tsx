@@ -11,7 +11,7 @@ const App: React.FC = () => {
   const [todos, setTodos]= useState<Todo[]>([]);
 
   
-
+//add to do
   const todoSubmitHandler = (text:string) => {
     console.log(text)
     setTodos((prevTodos) => [
@@ -19,13 +19,22 @@ const App: React.FC = () => {
       {id: Math.random().toString(), text:text},
     ])
   }
+
+  //delete to do
+
+  const todoDeleteHandler = (todoId: string) => {
+
+    setTodos((prevTodos)=> {
+      return prevTodos.filter((todo) => todo.id !== todoId);
+    });
+  }
   
 
   return (
     <div className="App">
      <h1>DING DONG</h1>
      <NewTodo onAddTodo={todoSubmitHandler}/>
-     <TodoList items= {todos} />    
+     <TodoList items= {todos} onDeleteTodo= {todoDeleteHandler} />    
      </div>
   );
 }
