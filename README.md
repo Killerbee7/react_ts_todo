@@ -1,4 +1,4 @@
-#[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/summary/new_code?id=Killerbee7_react_ts_todo)
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/summary/new_code?id=Killerbee7_react_ts_todo)
 # Todo App using react TS template
 
 ## User can add task , delete and edit
